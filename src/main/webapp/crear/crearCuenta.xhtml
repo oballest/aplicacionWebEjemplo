@@ -1,0 +1,23 @@
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	template="/WEB-INF/template.xhtml">
+
+	<ui:define name="content">
+		<h2>Registrar Cuenta</h2>
+		<h:form>
+			<h:panelGrid columns="2">
+				<h:outputLabel value="Saldo" for="saldo"/>
+				<h:inputText value="#{cuenta.saldo}" id="saldo">
+					<f:convertNumber maxIntegerDigits="10"/>
+				</h:inputText>
+			</h:panelGrid>
+			<h:commandButton action="#{registrarCuentaBean.crearCuenta()}" value="Crear Cuenta" />
+			<h:commandButton action="crearCliente" value="Regresar" />
+		</h:form>
+	</ui:define>
+
+</ui:composition>

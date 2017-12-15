@@ -1,0 +1,65 @@
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	template="WEB-INF/template.xhtml">
+	<ui:define name="content">
+		<h2>Pagina internacionalizacion</h2>
+
+		<h:panelGrid columns="1">
+			<h:outputText value="#{msg.title}" />
+			<h:outputText value="#{ejemploIntenacionalizacionBean.locale}" />
+		</h:panelGrid>
+
+		<h:form>
+			<h:messages showDetail="true" />
+			<h:commandButton value="Actualizar"
+				action="#{ejemploIntenacionalizacionBean.generarMensaje}" />
+
+			<h:panelGrid columns="1">
+				
+					<h:panelGroup>
+						<h:commandLink value="Registrar Gastos"
+							action="registro/registrar_gastos?faces-redirect=true" />
+						<h:commandLink value="Registrar Gastos Rich"
+							action="registro/registrar_gastos_rich?faces-redirect=true&amp;paginaRich=parametro" />
+					</h:panelGroup>
+						
+					<h:panelGroup> 
+						<h:commandLink value="Consultar Gastos"
+							action="reportes/consultar_gastos?faces-redirect=true" />
+					</h:panelGroup>
+					
+					<h:panelGroup> 
+						<h:commandLink value="Crear Cuenta"
+							action="crear/crearCliente?faces-redirect=true" />
+					</h:panelGroup>
+					<h:panelGroup> 
+						<h:commandLink value="Seguridad"
+							action="/seguridad?faces-redirect=true" />
+					</h:panelGroup>
+					<h:panelGroup> 
+						<h:commandLink value="Eventos"
+							action="/eventos?faces-redirect=true" />
+					</h:panelGroup>
+				
+				
+				<h:panelGrid columns="1">
+					<h:commandButton value="Consultar visita" action="#{ejemploIntenacionalizacionBean.consultarVisitas()}"/>
+				</h:panelGrid>
+
+			</h:panelGrid>
+
+			<h:panelGrid columns="1">
+				
+			</h:panelGrid>
+
+
+		</h:form>
+
+
+
+	</ui:define>
+</ui:composition>

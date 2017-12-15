@@ -1,0 +1,24 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<h:head>
+	<title>Aplicacion Ejemplo: Login Form</title>
+</h:head>
+<h:body>
+	<form method="post" action="j_security_check">
+		<h:panelGrid columns="2">
+			<h:outputLabel value="User Name:" for="j_username" />
+			<h:inputText id="j_username" />
+			<h:outputLabel value="Password:" for="j_password" />
+			<h:inputSecret id="j_password"  />
+			<p>
+				<h:commandButton value="Login" />
+			</p>
+		</h:panelGrid>
+	</form>
+</h:body>
+
+</html>

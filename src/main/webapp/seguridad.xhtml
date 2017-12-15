@@ -1,0 +1,24 @@
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	template="WEB-INF/template.xhtml">
+	<ui:define name="content">
+		<h2>Pagina Seguridad</h2>
+
+
+		<h:form>
+			<h:panelGrid columns="1">
+				<h:commandButton value="Metodo 1"
+					action="#{seguridadBean.metodoRolUno}" />
+				<h:commandButton value="Metodo 2"
+					action="#{seguridadBean.metodoRolDos}" />
+			</h:panelGrid>
+		</h:form>
+
+
+
+	</ui:define>
+</ui:composition>
